@@ -1,6 +1,4 @@
-#map,
-#pano {
-  float: left;
-  height: 100%;
-  width: 50%;
+body {
+  margin: 0px;
+  padding: 0px;
 }
