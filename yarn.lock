@@ -7293,6 +7293,11 @@
   "resolved" "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz"
   "version" "1.1.6"
 
+"load-google-maps-api@^2.0.2":
+  "integrity" "sha512-x/gIurGtJ2Gd34LXhed5tupZnG7P1oc1WpOHkyFpX7NesXkwhCBPyCsindj5BGKuQHrsbwARFWOjJGiAPhoMgg=="
+  "resolved" "https://registry.npmjs.org/load-google-maps-api/-/load-google-maps-api-2.0.2.tgz"
+  "version" "2.0.2"
+
 "load-json-file@^2.0.0":
   "integrity" "sha1-eUfkIUmvgNaWy/eXvKq8/h/inKg="
   "resolved" "https://registry.yarnpkg.com/load-json-file/-/load-json-file-2.0.0.tgz"
@@ -9443,6 +9448,13 @@
   "version" "3.4.1"
   dependencies:
     "performance-now" "^2.1.0"
+
+"random-streetview@^1.0.10":
+  "integrity" "sha512-OKP6Ts+OZRysx8yrLX0yhW+Z9NdFVdZgBdvUmCMaX6N4Ea4firlowCUBYsRuw9DLpWcfJ1X1ABYacrFXnp7Bhg=="
+  "resolved" "https://registry.npmjs.org/random-streetview/-/random-streetview-1.0.10.tgz"
+  "version" "1.0.10"
+  dependencies:
+    "load-google-maps-api" "^2.0.2"
 
 "randombytes@^2.0.0", "randombytes@^2.0.1", "randombytes@^2.0.5", "randombytes@^2.1.0":
   "integrity" "sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ=="

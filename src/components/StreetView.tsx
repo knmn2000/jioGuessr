@@ -15,11 +15,11 @@ zoom: 1,
 const google = window.google ? window.google : {};
 function StreetView(props) {
     const dispatch = useDispatch();
-    console.log(props);
     const containerStyle = {
   width: '100%',
   height: '100%'
 }
+    // const [coord, setCoord]= useState({lat:46.9719,lng:16.399});
     const [coord, setCoord]= useState({lat:51.53196799967446,lng: -0.10627818467629299});
     const options : google.maps.StreetViewPanoramaOptions= {addressControl: false, position: coord, showRoadLabels: false, 
         zoomControlOptions:{position: window.google.maps.ControlPosition.LEFT_BOTTOM}};
