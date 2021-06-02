@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import React, { useState } from 'react';
 import { GoogleApiWrapper, Map, Marker } from 'google-maps-react';
-import { Box, Button, Grid, makeStyles } from '@material-ui/core';
+import { Button, Grid, makeStyles } from '@material-ui/core';
 import { connect, useDispatch } from 'react-redux';
 import distanceCalculator from '../util/distanceCalculator';
 import {
@@ -24,7 +24,6 @@ interface Coordinates {
   lng: number;
 }
 function BoxComponent(props) {
-  const streetViewCoords = props.state.coordinates.userCoordinates;
   const classes = useStyles();
   const dispatch = useDispatch();
   const [coord, setCoord] = useState<Coordinates>({
@@ -43,7 +42,6 @@ function BoxComponent(props) {
     height: '100%',
   };
   const handleGuess = () => {
-    // const {lat, lng} = state.coordinates.guessCoordinates;
     const result =
       Math.round(
         distanceCalculator(

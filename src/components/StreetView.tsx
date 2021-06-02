@@ -1,32 +1,23 @@
 /* eslint-disable no-undef */
-import React, { useCallback, useEffect, useState } from 'react';
-import ReactStreetview from 'react-streetview';
-import axios from 'axios';
+import React, { useCallback, useState } from 'react';
 import { connect, useDispatch } from 'react-redux';
-import Streetview, { onPositionChanged } from 'react-google-streetview';
-import { GoogleApiWrapper, Map } from 'google-maps-react';
-import { Grid, Box, makeStyles } from '@material-ui/core';
+import Streetview from 'react-google-streetview';
+import { GoogleApiWrapper } from 'google-maps-react';
+import { Grid } from '@material-ui/core';
 import { updateUserPosition } from '../redux/coordinates/coordinates.actions';
-import { config } from 'process';
 import BoxComponent from '../components/BoxComponent';
-interface StreetViewOptions {
-  position: { lat: number; lng: number };
-  pov: { heading: number; pitch: number };
-  zoom: 1;
-}
-const google = window.google ? window.google : {};
+// TODO : add types
+// interface StreetViewOptions {
+//   position: { lat: number; lng: number };
+//   pov: { heading: number; pitch: number };
+//   zoom: 1;
+// }
 function StreetView(props) {
   const dispatch = useDispatch();
-  const containerStyle = {
-    width: '100%',
-    height: '100%',
-  };
-  // const [coord, setCoord]= useState({lat:46.9719,lng:16.399});
   const [coord, setCoord] = useState({
     lat: 51.53196799967446,
     lng: -0.10627818467629299,
   });
-  // const options : google.maps.StreetViewPanoramaOptions= ;
   const [options, setOptions] = useState<google.maps.StreetViewPanoramaOptions>(
     {
       addressControl: false,
