@@ -66,7 +66,7 @@ function BoxComponent(props) {
   };
   async function nextMap() {
     await axios
-      .get('https://random-ize.com/random-map/map-f.php')
+      .get('https://api.allorigins.win/raw?url=https://random-ize.com/random-map/map-f.php')
       .then((results) => {
         const randomCoord = {
           lat: results.data.split('1d')[1].split('!')[0],
