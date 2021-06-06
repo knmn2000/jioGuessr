@@ -6,7 +6,7 @@ var cors_proxy = require('cors-anywhere');
 cors_proxy
   .createServer({
     origin: 'https://jioguessr.netlify.app/',
-    originWhitelist: ['https://jioguessr.netlify.app/'],
+    originWhitelist: [],
     removeHeaders: ['cookie', 'cookie2'],
   })
   .listen(port, host, function () {
