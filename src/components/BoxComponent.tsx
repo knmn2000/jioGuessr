@@ -67,7 +67,7 @@ function BoxComponent(props) {
   async function nextMap() {
     await axios
       .get(
-        'http://jioguessrcorsservice-env.eba-3dyswq25.us-east-2.elasticbeanstalk.com/https://random-ize.com/random-map/map-f.php'
+        'https://jioguessr-api.herokuapp.com/https://random-ize.com/random-map/map-f.php'
       )
       .then((results) => {
         const randomCoord = {
