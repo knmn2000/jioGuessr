@@ -67,7 +67,7 @@ function BoxComponent(props) {
   async function nextMap() {
     await axios
       .get(
-        'https://jioguessr-api.herokuapp.com/https://random-ize.com/random-map/map-f.php'
+        'https://corsproxy.io/?https://random-ize.com/random-map/map-f.php'
       )
       .then((results) => {
         const randomCoord = {
